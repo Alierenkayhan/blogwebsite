@@ -69,5 +69,12 @@ namespace blogwebsite.Controllers
             hm.HeadingUpdate(p);
             return RedirectToAction("Index");
         }
+        public ActionResult DeleteHeading(int id)
+        {
+            var HeadingValue = hm.GetByID(id);
+            HeadingValue.HeadingStatus = false;
+            hm.HeadingDelete(HeadingValue);
+            return RedirectToAction("Index");
+        }
     }
 }

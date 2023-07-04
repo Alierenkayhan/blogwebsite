@@ -1,0 +1,34 @@
+﻿using BusinessLayer.Concrete;
+using DataAccessLayer.EntityFramework;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.Mvc;
+
+namespace blogwebsite.Controllers
+{
+    public class AboutController : Controller
+    {
+        AboutManager abm = new AboutManager(new EFAboutDal());
+        // GET: About
+        public ActionResult Index()
+        {
+            var aboutvalues = abm.GetList();
+            return View(aboutvalues);
+        }
+
+        [HttpGet]
+        public ActionResult AddAbout() 
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult AddAbout(AboutManager p)
+        {
+            abm.AboutAdd(p);
+            return RedirectToAction("Index");
+        }
+    }
+}
