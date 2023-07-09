@@ -1,5 +1,6 @@
 ﻿using BusinessLayer.Concrete;
 using DataAccessLayer.EntityFramework;
+using EntityLayer.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -25,10 +26,14 @@ namespace blogwebsite.Controllers
         }
 
         [HttpPost]
-        public ActionResult AddAbout(AboutManager p)
+        public ActionResult AddAbout(About p)
         {
             abm.AboutAdd(p);
             return RedirectToAction("Index");
+        }
+        public PartialViewResult AboutPartial()
+        {
+            return PartialView();
         }
     }
 }
