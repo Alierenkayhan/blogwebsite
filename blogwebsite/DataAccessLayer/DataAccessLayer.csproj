@@ -66,25 +66,9 @@
     <Compile Include="EntityFramework\EFContentDal.cs" />
     <Compile Include="EntityFramework\EFHeadingDal.cs" />
     <Compile Include="EntityFramework\EFWriterDal.cs" />
-    <Compile Include="Migrations\202305011851001_mig_writer_edit.cs" />
-    <Compile Include="Migrations\202305011851001_mig_writer_edit.designer.cs">
-      <DependentUpon>202305011851001_mig_writer_edit.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202305011934009_mig_writertitle_add.cs" />
-    <Compile Include="Migrations\202305011934009_mig_writertitle_add.designer.cs">
-      <DependentUpon>202305011934009_mig_writertitle_add.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202305031821091_mig_writer_addstatus.cs" />
-    <Compile Include="Migrations\202305031821091_mig_writer_addstatus.designer.cs">
-      <DependentUpon>202305031821091_mig_writer_addstatus.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202305031917361_mig_content_addstatus.cs" />
-    <Compile Include="Migrations\202305031917361_mig_content_addstatus.designer.cs">
-      <DependentUpon>202305031917361_mig_content_addstatus.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202305031921161_mig_heading_addstatus.cs" />
-    <Compile Include="Migrations\202305031921161_mig_heading_addstatus.designer.cs">
-      <DependentUpon>202305031921161_mig_heading_addstatus.cs</DependentUpon>
+    <Compile Include="Migrations\202310191743491_initialDb.cs" />
+    <Compile Include="Migrations\202310191743491_initialDb.designer.cs">
+      <DependentUpon>202310191743491_initialDb.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -94,27 +78,15 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202305011851001_mig_writer_edit.resx">
-      <DependentUpon>202305011851001_mig_writer_edit.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202305011934009_mig_writertitle_add.resx">
-      <DependentUpon>202305011934009_mig_writertitle_add.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202305031821091_mig_writer_addstatus.resx">
-      <DependentUpon>202305031821091_mig_writer_addstatus.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202305031917361_mig_content_addstatus.resx">
-      <DependentUpon>202305031917361_mig_content_addstatus.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202305031921161_mig_heading_addstatus.resx">
-      <DependentUpon>202305031921161_mig_heading_addstatus.cs</DependentUpon>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\EntityLayer\EntityLayer.csproj">
       <Project>{36ff8dea-7af6-4079-bd21-5bc41db84f17}</Project>
       <Name>EntityLayer</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202310191743491_initialDb.resx">
+      <DependentUpon>202310191743491_initialDb.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

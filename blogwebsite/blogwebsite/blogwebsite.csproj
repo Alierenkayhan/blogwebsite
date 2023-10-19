@@ -2281,10 +2281,6 @@
     <Content Include="AdminLTE-3.0.4\plugins\sweetalert2-theme-bootstrap-4\bootstrap-4.scss" />
     <Content Include="AdminLTE-3.0.4\plugins\toastr\toastr.js.map" />
     <Content Include="AdminLTE-3.0.4\README.md" />
-    <None Include="Dockerfile" />
-    <None Include=".dockerignore">
-      <DependentUpon>Dockerfile</DependentUpon>
-    </None>
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />

@@ -95,12 +95,20 @@
                                 <td>
                                     <ul class="list-inline">
                                         <li class="list-inline-item">
-                                            <img alt="Avatar" class="table-avatar" src="@item.Writer.WriterImage">
+                                            <img alt="Avatar"   class="table-avatar" src="@item.Writer.WriterImage">
                                         </li>
                                     </ul>
                                 </td>
                                 <td>
-                                    @item.HeadingStatus
+                                    @if (item.HeadingStatus == false)
+                                    {
+                                        <span>Pasif</span>
+                                    }
+                                    else
+                                    {
+                                        <span>Aktif</span>
+                                    }
+                               
                                 </td>
                                 <td class="project-state">
                                     <span class="@color">@item.Category.CategoryName</span>
